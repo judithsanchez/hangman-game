@@ -1,0 +1,242 @@
+.hangman_game_container {
+    height: 90vh;
+    font-family: 'Roboto', sans-serif;
+    margin: auto;
+    max-width: 399px;
+    text-align: center;
+ }
+ 
+ .hangman_select_content_data {
+    align-items: center;
+    display: grid;
+    grid-template-areas: 
+    ". . icon_dice"
+    "previous_arrow characters next_arrow"
+    ". start_game ."
+    ;
+    grid-template-columns: 0.5fr 1fr 0.5fr;
+    grid-template-rows: auto;
+    height: inherit;
+    justify-items: center;
+    max-width: 100%;
+ }
+ 
+ 
+ .icon_dice {
+    grid-area: icon_dice;
+    height: 34px;
+    width: 31px;
+ }
+ 
+ .arrows {
+    height: 31px;
+    width: 19px;
+ }
+ 
+ #previous_arrow {
+    grid-area: previous_arrow;
+ }
+ 
+ #next_arrow{
+    grid-area: next_arrow;
+ }
+ 
+ .characters {
+    grid-area: characters;
+    height: 300px;
+    width: 200px;
+ }
+ 
+ #start_game_button {
+    grid-area: start_game;
+ }
+ 
+ .icon_dice, .arrows,  #start_game_button{
+    cursor: pointer;
+ }
+ 
+ .buttons {
+    align-items: center;
+    background-color: #47D8E0;
+    border-radius: 30px;
+    color: white;
+    display: flex;
+    font-size: 24px;
+    height: 70px;
+    justify-content: center;
+    width: 150px;
+ }
+ 
+ .buttons p {
+    margin: 0;
+    padding: 0;
+ }
+ 
+ .hangman_game_screen {
+    display: none;
+    grid-template-areas: 
+    "clues translation reload"
+    "sentence sentence sentence"
+    "counter counter counter"
+    "keyboard keyboard keyboard"
+    ;
+    grid-template-columns: 1fr 1fr 0.5fr;
+    grid-template-rows: auto;
+    height: inherit;
+    max-width: 100%;
+ }
+ 
+ .clues_container {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    grid-area: clues;
+    flex-direction: row;
+    justify-content: space-around;
+ }
+ 
+ .clues {
+    height: 16px;
+    width: 20px;
+ }
+ 
+ .translation_container {
+    align-items: center;
+    display: flex;
+    font-size: 10px;
+    grid-area: translation;
+    justify-content: center;
+ }
+ 
+ /* .translation_container p {
+    font-size: px;
+ } */
+ 
+ .reload_container {
+    align-items: center;
+    display: flex;
+    grid-area: reload;
+    justify-content: center;
+ }
+ 
+ .reload_page {
+    height: 21px;
+    width: 23px;
+ }
+ 
+ .sentence_container {
+    align-items: center;
+    display: flex;
+    grid-area: sentence;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+ }
+ 
+ .container_word {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 5px 5px;
+ }
+ 
+ .container_letter {
+    align-items: center;
+    background: #FFFFFF;
+    box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    color: white;
+    display: flex;
+    height: 25px;
+    justify-content: center;
+    width: 25px;
+ }
+ 
+ .container_letter p {
+    margin: 0;
+    padding: 0;
+ }
+ 
+ .attemps_counter_container {
+    align-content: center;
+    display: flex;
+    grid-area: counter;
+    justify-content: center;
+ }
+ 
+ .attemps_counter {
+    height: 200px;
+    width: 183px;
+ }
+ 
+ 
+ .keyboard_container {
+    display: grid;
+    grid-area: keyboard;
+    grid-template-areas: 
+    "first_row"
+    "second_row"
+    "third_row"
+    "special_characters"
+    ;
+    grid-template-columns: auto;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+ }
+ 
+ .keyboard_first_row {
+    display: flex;
+    flex-direction: row;
+    grid-area: first_row;
+ }
+ 
+ .keyboard_second_row {
+    display: flex;
+    flex-direction: row;
+    grid-area: second_row;
+ }
+ 
+ .keyboard_third_row {
+    grid-area: third_row;
+ }
+ 
+ .keyboard_special_spanish_characters {
+    grid-area: special_characters;
+ }
+ 
+ .keyboard_first_row , .keyboard_second_row, .keyboard_third_row, .keyboard_special_spanish_characters {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+ }
+ 
+ 
+ .regular_characters {
+    border-radius: 5px;
+    height: 30px;
+    margin: 2px;
+    width: 30px;
+ }
+ 
+ .special_character {
+    border-radius: 3px;
+    height: 20px;
+    margin: 1px 2px;
+    width: 20px;
+ }
+ 
+ .keys {
+    align-items: center;
+    background: #D3D6DD;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+ }
+ 
+ .keys p {
+    margin: 0;
+    padding: 0;
+ }
+ 
+ 
