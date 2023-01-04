@@ -1,7 +1,9 @@
 class HangmanGame {
   constructor(objects_array) {
-    this.original_sentence = this.get_random_object(objects_array).spanish;
-    this.sentence_translation = this.get_random_object(objects_array).english;
+    this.sentence = this.get_random_object(objects_array);
+
+    this.original_sentence = this.sentence.spanish;
+    this.sentence_translation = this.sentence.english;
 
     this.separated_sentence = this.original_sentence.split(" ");
 

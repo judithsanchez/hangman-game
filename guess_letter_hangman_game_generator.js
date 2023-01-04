@@ -14,38 +14,12 @@ function guess_letter(letter) {
     if (current_hangman_game.game_status === "won") {
       document.getElementById("attemps_counter").src =
         "https://bocaditosespanol.com/wp-content/uploads/2022/10/hangman-you-won.svg";
-
-      const keys = document.querySelectorAll(".keys");
-
-      keys.forEach((key) => {
-        key.style.cursor = "default";
-        key.removeAttribute("onclick");
-      });
-
-      const clues = document.querySelectorAll(".clues");
-
-      clues.forEach((clue) => {
-        clue.style.cursor = "default";
-        clue.removeAttribute("onclick");
-      });
-
-      document.getElementById("translation_container").innerHTML =
-        current_hangman_game.sentence_translation;
     }
-
-    document.getElementById(`button_${letter}`).style.backgroundColor =
-      "#BBBDC1";
     document.getElementById(`button_${letter}`).style.color = "#6DEEBB";
-    document.getElementById(`button_${letter}`).style.cursor = "default";
-    document.getElementById(`button_${letter}`).removeAttribute("onclick");
   }
 
   if (!current_hangman_game.game_sentence.includes(letter)) {
-    document.getElementById(`button_${letter}`).style.backgroundColor =
-      "#BBBDC1";
     document.getElementById(`button_${letter}`).style.color = "#DB4D89";
-    document.getElementById(`button_${letter}`).style.cursor = "default";
-    document.getElementById(`button_${letter}`).removeAttribute("onclick");
     document.getElementById(
       "attemps_counter"
     ).src = `https://bocaditosespanol.com/wp-content/uploads/2022/10/hangman-${current_hangman_game.attempts_left}-lives.svg`;
@@ -59,22 +33,26 @@ function guess_letter(letter) {
           current_hangman_game.game_sentence[i];
       }
     }
+  }
 
-    const keys = document.querySelectorAll(".keys");
+  document.getElementById(`button_${letter}`).style.backgroundColor = "#BBBDC1";
+  document.getElementById(`button_${letter}`).style.cursor = "default";
+  document.getElementById(`button_${letter}`).removeAttribute("onclick");
 
-    keys.forEach((key) => {
-      key.style.cursor = "default";
-      key.removeAttribute("onclick");
-    });
+  if (current_hangman_game.game_status !== "in progress") {
+    document.getElementById("translation_container").innerHTML =
+      current_hangman_game.sentence_translation;
 
     const clues = document.querySelectorAll(".clues");
-
     clues.forEach((clue) => {
       clue.style.cursor = "default";
       clue.removeAttribute("onclick");
     });
 
-    document.getElementById("translation_container").innerHTML =
-      current_hangman_game.sentence_translation;
+    const keys = document.querySelectorAll(".keys");
+    keys.forEach((key) => {
+      key.style.cursor = "default";
+      key.removeAttribute("onclick");
+    });
   }
 }
