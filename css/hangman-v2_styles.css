@@ -253,6 +253,7 @@
    }
 
    .no_landcape_mobile_mode p {
+      font-family: 'Roboto', sans-serif;
       font-size: 12px;
       margin-left: 10%;
       margin-top: 25%;

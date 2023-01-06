@@ -41,12 +41,12 @@ class HangmanGame {
   }
 
   words_to_stars(array) {
-    let modifiedArr = [];
-    for (var i = 0; i < array.length; i++) {
-      var modifiedString = array[i].replace(/[a-zA-Z]/g, "*");
-      modifiedArr.push(modifiedString);
+    let modified_array = [];
+    for (let i = 0; i < array.length; i++) {
+      let modified_string = array[i].replace(/[a-zA-ZáéíóúüÁÉÍÓÚÜ]/g, "*");
+      modified_array.push(modified_string);
     }
-    return modifiedArr;
+    return modified_array;
   }
 
   remove_duplicated_characters(string) {
