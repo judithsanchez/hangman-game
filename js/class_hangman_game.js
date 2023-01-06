@@ -63,9 +63,7 @@ class HangmanGame {
         return this.game_status;
       }
       return this.game_feedback;
-    }
-
-    if (this.game_sentence.includes(letter)) {
+    } else {
       this.guessed_letters.push(letter);
 
       let letter_index = this.to_guess.indexOf(letter);
