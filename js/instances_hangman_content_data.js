@@ -61,24 +61,24 @@ const hangman_content_data_list = [
         english: "She lives at the bottom of the sea with her family",
       },
       {
-        spanish: "Un día, conoce a Eric, un príncipe humano",
-        english: "One day, she meets Eric, a human prince",
+        spanish: "Un día conoce a Eric un príncipe humano",
+        english: "One day she meets Eric a human prince",
       },
       {
         spanish: "Ariel se enamora de Eric",
         english: "Ariel falls in love with Eric",
       },
       {
-        spanish: "Ursula, una bruja malvada, hace un trato con Ariel",
-        english: "Ursula, an evil witch, makes a deal with Ariel",
+        spanish: "Ursula una bruja malvada hace un trato con Ariel",
+        english: "Ursula an evil witch makes a deal with Ariel",
       },
       {
         spanish: "Ariel acepta el trato y se convierte en humana",
         english: "Ariel accepts the deal and becomes human",
       },
       {
-        spanish: "Su padre, el rey Tritón, está enfadado",
-        english: "Her father, King Triton, is angry",
+        spanish: "Su padre el rey Tritón está enfadado",
+        english: "Her father King Triton is angry",
       },
       {
         spanish: "Ursula trata de separar a Ariel y Eric",
@@ -164,8 +164,8 @@ const hangman_content_data_list = [
         english: "Anna always sees the bright side of things",
       },
       {
-        spanish: "Ella es impulsiva, leal y amorosa",
-        english: "She is impulsive, loyal and loving",
+        spanish: "Ella es impulsiva leal y amorosa",
+        english: "She is impulsive loyal and loving",
       },
       {
         spanish: "Anna quiere jugar con Elsa",
@@ -176,12 +176,12 @@ const hangman_content_data_list = [
         english: "Anna decides to bring Elsa back home",
       },
       {
-        spanish: "En su viaje, Anna conoce a Kristoff",
-        english: "On her journey, Anna meets Kristoff",
+        spanish: "En su viaje Anna conoce a Kristoff",
+        english: "On her journey Anna meets Kristoff",
       },
       {
-        spanish: "Juntos, enfrentan muchos peligros y obstáculos",
-        english: "Together, they face many dangers and obstacles",
+        spanish: "Juntos enfrentan muchos peligros y obstáculos",
+        english: "Together they face many dangers and obstacles",
       },
       {
         spanish: "Olaf es un muñeco de nieve creado por Elsa",
@@ -335,8 +335,8 @@ const hangman_content_data_list = [
         english: "You'll know I took it hard ",
       },
       {
-        spanish: "Abuela, ten las sombrillas",
-        english: "Abuela, hold the umbrellas",
+        spanish: "Abuela ten las sombrillas",
+        english: "Abuela hold the umbrellas",
       },
       { spanish: "Boda en un huracán ", english: "Wedding in a hurricane" },
       {
@@ -356,17 +356,17 @@ const hangman_content_data_list = [
         english: "Rare the gift to go visualizing",
       },
       {
-        spanish: "Deja a la abuela, como a todos, temblando",
-        english: "Leaves Grandma, like everyone else, trembling",
+        spanish: "Deja a la abuela como a todos temblando",
+        english: "Leaves Grandma like everyone else trembling",
       },
       {
         spanish: "Enfrentando profecías sin interpretar",
         english: "Facing uninterpreted prophecies",
       },
-      { spanish: "¿Quieres tú intentar?", english: "Do you want to try?" },
+      { spanish: "Quieres tú intentar", english: "Do you want to try?" },
       {
-        spanish: "Terror en su faz, ratas por detrás",
-        english: "Terror on her face, rats from behind",
+        spanish: "Terror en su faz ratas por detrás",
+        english: "Terror on her face rats from behind",
       },
       {
         spanish: "Al oír tu nombre no hay marcha atrás",
@@ -377,8 +377,8 @@ const hangman_content_data_list = [
         english: "Scream as you tremble to wake up",
       },
       {
-        spanish: "Él dijo mi pez se moriría, y ve",
-        english: "He said my fish would die, and see",
+        spanish: "Él dijo mi pez se moriría y ve",
+        english: "He said my fish would die and see",
       },
       {
         spanish: "Él dijo serás panzón y justo así fue",
@@ -405,7 +405,7 @@ const hangman_content_data_list = [
         english: "And so the power of my gift",
       },
       {
-        spanish: "Como uvas, va a madurar ",
+        spanish: "Como uvas va a madurar ",
         english: "Like grapes, will ripen ",
       },
       {
@@ -430,12 +430,12 @@ const hangman_content_data_list = [
         english: "Give me the pure truth of Bruno ",
       },
       {
-        spanish: "Isabela, tu amor llegó",
+        spanish: "Isabela tu amor llegó",
         english: "Isabela, your love has arrived",
       },
       { spanish: "A la mesa", english: "To the table" },
       {
-        spanish: "No hablemos de Bruno, no ",
+        spanish: "No hablemos de Bruno no ",
         english: "Let's not talk about Bruno, no ",
       },
       {
@@ -745,7 +745,7 @@ const hangman_content_data_list = [
         english: "Anna goes on a journey to find Elsa",
       },
       {
-        spanish: "Anna, Kristoff y Olaf enfrentan peligros",
+        spanish: "Anna Kristoff y Olaf enfrentan peligros",
         english: "Anna, Kristoff and Olaf face dangers",
       },
       {
@@ -1604,7 +1604,7 @@ const hangman_content_data_list = [
       },
       { spanish: "Se enamoran", english: "They fall in love" },
       {
-        spanish: "El malo es El hombre sombra",
+        spanish: "El malo es el hombre sombra",
         english: "The bad guy is The Shadowman",
       },
       {
