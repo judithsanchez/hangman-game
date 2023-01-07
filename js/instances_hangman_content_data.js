@@ -775,7 +775,7 @@ const hangman_content_data_list = [
     content_type: "movie",
     content_name: { english: "Aladdin", spanish: "Aladdin" },
     content_image:
-      "https://bocaditosespanol.com/wp-content/uploads/2022/10/characters-disney-jasmine_1.svg",
+      "https://bocaditosespanol.com/wp-content/uploads/2023/01/jasmine.svg",
     sentences: [
       {
         spanish: "Aladdin es un chico pobre",
@@ -846,7 +846,7 @@ const hangman_content_data_list = [
     content_type: "movie",
     content_name: { english: "Mulan", spanish: "Mulán" },
     content_image:
-      "https://bocaditosespanol.com/wp-content/uploads/2022/10/characters-disney-mulan_1.svg",
+      "https://bocaditosespanol.com/wp-content/uploads/2023/01/mulan.svg",
     sentences: [
       { spanish: "Es una chica valiente", english: "She is a brave girl" },
       { spanish: "Vive en China", english: "Lives in China" },
