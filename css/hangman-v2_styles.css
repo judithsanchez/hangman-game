@@ -40,11 +40,17 @@
  #next_arrow{
     grid-area: next_arrow;
  }
+
+ .characters_container {
+   display: flex;
+   grid-area: characters;
+   height: 450px;
+   justify-content: center;
+   width: 250px;
+ }
  
  .characters {
-    grid-area: characters;
-    height: 300px;
-    width: 200px;
+   width: 95%;
  }
  
  #start_game_button {
