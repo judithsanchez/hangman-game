@@ -37,7 +37,7 @@ class HangmanGame {
   }
 
   delete_special_characters(string) {
-    return string.replace(/[^\w\sáéíóúüÁÉÍÓÚÜ]/g, "");
+    return string.replace(/[^\w\sáéíóúüñÁÉÍÓÚÜÑ]/g, "");
   }
 
   words_to_stars(array) {
