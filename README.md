@@ -27,7 +27,7 @@ In this project, I had the opportunity to work with JavaScript using object-orie
     │   ├── 💛 html_code_generator.js
     │   ├── 💛 instances_hangman_content_data.js
     │   └── 💛 instances_hangman_game.js
-    │	├── 📂 media
+    ├── 📂 media
     ├── 📄 index.html
     ├── 🔑 LICENSE
     └── 📖 README.md
