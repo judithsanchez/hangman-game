@@ -265,12 +265,16 @@
       margin-top: 25%;
    }
 
-
-   .hangman_select_content_data {
-      display: none;
-   }
-
-   .hangman_game_screen {
+   .introduction {
       display: none !important;
    }
+
+   .video_container {
+      display: none !important;
+   }
+
+   .lyrics {
+      display: none !important;
+   }
+
 }

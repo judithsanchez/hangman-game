@@ -1,133 +1,389 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-   <meta charset="UTF-8">
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="./css/hangman-v2_styles.css">
-   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-   <title>El ahorcado</title>
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/hangman-v2_styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>El ahorcado</title>
+  </head>
 
-<body>
+  <body>
+    <section class="hangman_game_container" id="hangman_game_container">
+      <section
+        class="hangman_select_content_data"
+        id="hangman_select_content_data"
+      >
+        <img
+          alt="Get random sentence icon"
+          class="icon_dice"
+          id="icon_dice"
+          src="https://cdn.bfldr.com/Z0BJ31FP/at/v3848958twjfmn8mmvn7w3kc/icon-random.svg"
+          onclick="random_data()"
+        />
+        <img
+          alt="Previous arrow"
+          class="arrows"
+          id="previous_arrow"
+          src="https://cdn.bfldr.com/Z0BJ31FP/at/498n249kr6fqfbrtcgws77m6/icon-previous-arrow.svg"
+          onclick="previous_data()"
+        />
 
-   <section class="hangman_game_container" id="hangman_game_container">
+        <div class="characters_container">
+          <img
+            alt="Bocadito wearing a Ariel costume"
+            class="characters"
+            id="character_bocadito"
+            src="https://cdn.bfldr.com/Z0BJ31FP/at/b8p9whrv8ntrstsg5qvwhm7s/ariel.svg"
+          />
+        </div>
 
-      <section class="hangman_select_content_data" id="hangman_select_content_data">
+        <img
+          alt="Next arrow"
+          class="arrows"
+          id="next_arrow"
+          src="https://cdn.bfldr.com/Z0BJ31FP/at/sxknj935vs6b6c8rpsmxs8/icon-next-arrow.svg"
+          onclick="next_data()"
+        />
 
-         <img alt="Get random sentence icon" class="icon_dice" id="icon_dice" src="https://bocaditosespanol.com/wp-content/uploads/2022/10/icon-random_1.svg" onclick="random_data()">
-         <img alt="Previous arrow" class="arrows" id="previous_arrow" src="https://bocaditosespanol.com/wp-content/uploads/2022/10/icon-next-arrow.svg" onclick="previous_data()">
-         
-         <div class="characters_container">
-            <img alt="Bocadito wearing a Ariel costume" class="characters" id="character_bocadito" src="https://bocaditosespanol.com/wp-content/uploads/2023/01/ariel.svg">
-         </div>
-
-
-         <img alt="Next arrow" class="arrows" id="next_arrow" src="https://bocaditosespanol.com/wp-content/uploads/2022/10/icon-next-arrow-1.svg" onclick="next_data()">
-
-         <div class="buttons" id="start_game_button" onclick="start_game()"><p>Jugar</p></div>
-
+        <div class="buttons" id="start_game_button" onclick="start_game()">
+          <p>Jugar</p>
+        </div>
       </section>
 
       <section class="hangman_game_screen" id="hangman_game_screen">
+        <section class="clues_container" id="clues_container">
+          <img
+            alt="Mini clue heart"
+            src="https://cdn.bfldr.com/Z0BJ31FP/at/54hqxg93bk7tgb6c43cj45v/icon-heart.svg"
+            class="clues"
+            id="clue0"
+            onclick="get_clue(`clue0`)"
+          />
+          <img
+            alt="Mini clue heart"
+            src="https://cdn.bfldr.com/Z0BJ31FP/at/54hqxg93bk7tgb6c43cj45v/icon-heart.svg"
+            class="clues"
+            id="clue1"
+            onclick="get_clue(`clue1`)"
+          />
+          <img
+            alt="Mini clue heart"
+            src="https://cdn.bfldr.com/Z0BJ31FP/at/54hqxg93bk7tgb6c43cj45v/icon-heart.svg"
+            class="clues"
+            id="clue2"
+            onclick="get_clue(`clue2`)"
+          />
+        </section>
 
-            <section class="clues_container" id="clues_container">
-               <img alt="Mini clue heart" src="https://bocaditosespanol.com/wp-content/uploads/2022/10/icon-heart.svg" class="clues" id="clue0" onclick="get_clue(`clue0`)">
-               <img alt="Mini clue heart" src="https://bocaditosespanol.com/wp-content/uploads/2022/10/icon-heart.svg" class="clues" id="clue1" onclick="get_clue(`clue1`)">
-               <img alt="Mini clue heart" src="https://bocaditosespanol.com/wp-content/uploads/2022/10/icon-heart.svg" class="clues" id="clue2" onclick="get_clue(`clue2`)">
-            </section>
+        <section class="translation_container" id="translation_container">
+          <p></p>
+        </section>
 
-            <section class="translation_container" id="translation_container">
-               <p></p>
-            </section>
+        <section class="reload_container" id="reload_container">
+          <img
+            alt="Reload icon"
+            src="https://cdn.bfldr.com/Z0BJ31FP/at/tgg67f6gxbhppwjvn9sv7z/icon-again.svg"
+            class="reload_page"
+            id="reload_page"
+            onclick="window.location.reload()"
+          />
+        </section>
 
-            <section class="reload_container" id="reload_container">
-               <img alt="Reload icon" src="https://bocaditosespanol.com/wp-content/uploads/2022/10/icon-new-game.svg" class="reload_page" id="reload_page" onclick="window.location.reload()">
-            </section>
+        <section class="sentence_container" id="sentence_container"></section>
 
-         <section class="sentence_container" id="sentence_container"></section>
+        <section
+          class="attemps_counter_container"
+          id="attemps_counter_container "
+        >
+          <img
+            alt="Evil monster"
+            class="attemps_counter"
+            id="attemps_counter"
+            src="https://cdn.bfldr.com/Z0BJ31FP/at/t92wb82b3b474fmsx3cbvh4/hangman-wifi-lives-10.svg"
+          />
+        </section>
 
-         <section class="attemps_counter_container " id="attemps_counter_container ">
-            <img alt="Evil monster" class="attemps_counter" id="attemps_counter" src="https://bocaditosespanol.com/wp-content/uploads/2022/10/hangman-10-lives.svg">
-         </section> 
-
-         <section class="keyboard_container" id="keyboard_container">
-
-            <div class="keyboard_first_row" id="keyboard_first_row">
-               <div class="regular_characters keys" id="button_a" onclick="guess_letter(`a`)"><p>a</p></div>
-               <div class="regular_characters keys" id="button_b" onclick="guess_letter(`b`)"><p>b</p></div>
-               <div class="regular_characters keys" id="button_c" onclick="guess_letter(`c`)"><p>c</p></div>
-               <div class="regular_characters keys" id="button_d" onclick="guess_letter(`d`)"><p>d</p></div>
-               <div class="regular_characters keys" id="button_e" onclick="guess_letter(`e`)"><p>e</p></div>
-               <div class="regular_characters keys" id="button_f" onclick="guess_letter(`f`)"><p>f</p></div>
-               <div class="regular_characters keys" id="button_g" onclick="guess_letter(`g`)"><p>g</p></div>
-               <div class="regular_characters keys" id="button_h" onclick="guess_letter(`h`)"><p>h</p></div>
-               <div class="regular_characters keys" id="button_i" onclick="guess_letter(`i`)"><p>i</p></div>
-               <div class="regular_characters keys" id="button_j" onclick="guess_letter(`j`)"><p>j</p></div>
-               <div class="regular_characters keys" id="button_k" onclick="guess_letter(`k`)"><p>k</p></div>
-
+        <section class="keyboard_container" id="keyboard_container">
+          <div class="keyboard_first_row" id="keyboard_first_row">
+            <div
+              class="regular_characters keys"
+              id="button_a"
+              onclick="guess_letter(`a`)"
+            >
+              <p>a</p>
             </div>
-
-            <div class="keyboard_second_row" id="keyboard_second_row">
-               <div class="regular_characters keys" id="button_l" onclick="guess_letter(`l`)"><p>l</p></div>
-               <div class="regular_characters keys" id="button_m" onclick="guess_letter(`m`)"><p>m</p></div>
-               <div class="regular_characters keys" id="button_n" onclick="guess_letter(`n`)"><p>n</p></div>
-               <div class="regular_characters keys" id="button_ñ" onclick="guess_letter(`ñ`)"><p>ñ</p></div>
-               <div class="regular_characters keys" id="button_o" onclick="guess_letter(`o`)"><p>o</p></div>
-               <div class="regular_characters keys" id="button_p" onclick="guess_letter(`p`)"><p>p</p></div>
-               <div class="regular_characters keys" id="button_q" onclick="guess_letter(`q`)"><p>q</p></div>
-               <div class="regular_characters keys" id="button_r" onclick="guess_letter(`r`)"><p>r</p></div>
-               <div class="regular_characters keys" id="button_s" onclick="guess_letter(`s`)"><p>s</p></div>
-               
+            <div
+              class="regular_characters keys"
+              id="button_b"
+              onclick="guess_letter(`b`)"
+            >
+              <p>b</p>
             </div>
-            
-
-            <div class="keyboard_third_row" id="keyboard_third_row">
-               <div class="regular_characters keys" id="button_t" onclick="guess_letter(`t`)"><p>t</p></div>
-               <div class="regular_characters keys" id="button_u" onclick="guess_letter(`u`)"><p>u</p></div>
-               <div class="regular_characters keys" id="button_v" onclick="guess_letter(`v`)"><p>v</p></div>
-               <div class="regular_characters keys" id="button_w" onclick="guess_letter(`w`)"><p>w</p></div>            
-               <div class="regular_characters keys" id="button_x" onclick="guess_letter(`x`)"><p>x</p></div>
-               <div class="regular_characters keys" id="button_y" onclick="guess_letter(`y`)"><p>y</p></div>
-               <div class="regular_characters keys" id="button_z" onclick="guess_letter(`z`)"><p>z</p></div>
+            <div
+              class="regular_characters keys"
+              id="button_c"
+              onclick="guess_letter(`c`)"
+            >
+              <p>c</p>
             </div>
-            
-
-            <div class="keyboard_special_spanish_characters" id="keyboard_special_spanish_characters">
-               <div class="special_character keys" id="button_á" onclick="guess_letter(`á`)"><p>á</p></div>
-               <div class="special_character keys" id="button_é" onclick="guess_letter(`é`)"><p>é</p></div>
-               <div class="special_character keys" id="button_í" onclick="guess_letter(`í`)"><p>í</p></div>
-               <div class="special_character keys" id="button_ó" onclick="guess_letter(`ó`)"><p>ó</p></div>
-               <div class="special_character keys" id="button_ú" onclick="guess_letter(`ú`)"><p>ú</p></div>
-               <div class="special_character keys" id="button_ü" onclick="guess_letter(`ü`)"><p>ü</p></div>
+            <div
+              class="regular_characters keys"
+              id="button_d"
+              onclick="guess_letter(`d`)"
+            >
+              <p>d</p>
             </div>
+            <div
+              class="regular_characters keys"
+              id="button_e"
+              onclick="guess_letter(`e`)"
+            >
+              <p>e</p>
+            </div>
+            <div
+              class="regular_characters keys"
+              id="button_f"
+              onclick="guess_letter(`f`)"
+            >
+              <p>f</p>
+            </div>
+            <div
+              class="regular_characters keys"
+              id="button_g"
+              onclick="guess_letter(`g`)"
+            >
+              <p>g</p>
+            </div>
+            <div
+              class="regular_characters keys"
+              id="button_h"
+              onclick="guess_letter(`h`)"
+            >
+              <p>h</p>
+            </div>
+            <div
+              class="regular_characters keys"
+              id="button_i"
+              onclick="guess_letter(`i`)"
+            >
+              <p>i</p>
+            </div>
+            <div
+              class="regular_characters keys"
+              id="button_j"
+              onclick="guess_letter(`j`)"
+            >
+              <p>j</p>
+            </div>
+            <div
+              class="regular_characters keys"
+              id="button_k"
+              onclick="guess_letter(`k`)"
+            >
+              <p>k</p>
+            </div>
+          </div>
 
-         </section>
-         
+          <div class="keyboard_second_row" id="keyboard_second_row">
+            <div
+              class="regular_characters keys"
+              id="button_l"
+              onclick="guess_letter(`l`)"
+            >
+              <p>l</p>
+            </div>
+            <div
+              class="regular_characters keys"
+              id="button_m"
+              onclick="guess_letter(`m`)"
+            >
+              <p>m</p>
+            </div>
+            <div
+              class="regular_characters keys"
+              id="button_n"
+              onclick="guess_letter(`n`)"
+            >
+              <p>n</p>
+            </div>
+            <div
+              class="regular_characters keys"
+              id="button_ñ"
+              onclick="guess_letter(`ñ`)"
+            >
+              <p>ñ</p>
+            </div>
+            <div
+              class="regular_characters keys"
+              id="button_o"
+              onclick="guess_letter(`o`)"
+            >
+              <p>o</p>
+            </div>
+            <div
+              class="regular_characters keys"
+              id="button_p"
+              onclick="guess_letter(`p`)"
+            >
+              <p>p</p>
+            </div>
+            <div
+              class="regular_characters keys"
+              id="button_q"
+              onclick="guess_letter(`q`)"
+            >
+              <p>q</p>
+            </div>
+            <div
+              class="regular_characters keys"
+              id="button_r"
+              onclick="guess_letter(`r`)"
+            >
+              <p>r</p>
+            </div>
+            <div
+              class="regular_characters keys"
+              id="button_s"
+              onclick="guess_letter(`s`)"
+            >
+              <p>s</p>
+            </div>
+          </div>
+
+          <div class="keyboard_third_row" id="keyboard_third_row">
+            <div
+              class="regular_characters keys"
+              id="button_t"
+              onclick="guess_letter(`t`)"
+            >
+              <p>t</p>
+            </div>
+            <div
+              class="regular_characters keys"
+              id="button_u"
+              onclick="guess_letter(`u`)"
+            >
+              <p>u</p>
+            </div>
+            <div
+              class="regular_characters keys"
+              id="button_v"
+              onclick="guess_letter(`v`)"
+            >
+              <p>v</p>
+            </div>
+            <div
+              class="regular_characters keys"
+              id="button_w"
+              onclick="guess_letter(`w`)"
+            >
+              <p>w</p>
+            </div>
+            <div
+              class="regular_characters keys"
+              id="button_x"
+              onclick="guess_letter(`x`)"
+            >
+              <p>x</p>
+            </div>
+            <div
+              class="regular_characters keys"
+              id="button_y"
+              onclick="guess_letter(`y`)"
+            >
+              <p>y</p>
+            </div>
+            <div
+              class="regular_characters keys"
+              id="button_z"
+              onclick="guess_letter(`z`)"
+            >
+              <p>z</p>
+            </div>
+          </div>
+
+          <div
+            class="keyboard_special_spanish_characters"
+            id="keyboard_special_spanish_characters"
+          >
+            <div
+              class="special_character keys"
+              id="button_á"
+              onclick="guess_letter(`á`)"
+            >
+              <p>á</p>
+            </div>
+            <div
+              class="special_character keys"
+              id="button_é"
+              onclick="guess_letter(`é`)"
+            >
+              <p>é</p>
+            </div>
+            <div
+              class="special_character keys"
+              id="button_í"
+              onclick="guess_letter(`í`)"
+            >
+              <p>í</p>
+            </div>
+            <div
+              class="special_character keys"
+              id="button_ó"
+              onclick="guess_letter(`ó`)"
+            >
+              <p>ó</p>
+            </div>
+            <div
+              class="special_character keys"
+              id="button_ú"
+              onclick="guess_letter(`ú`)"
+            >
+              <p>ú</p>
+            </div>
+            <div
+              class="special_character keys"
+              id="button_ü"
+              onclick="guess_letter(`ü`)"
+            >
+              <p>ü</p>
+            </div>
+          </div>
+        </section>
       </section>
 
       <section class="no_landcape_mobile_mode" id="no_landcape_mobile_mode">
-
-         <img alt="Webby having a tantrum" class="angry_witch" id="angry_witch" src="https://bocaditosespanol.com/wp-content/uploads/2022/10/characters-bruja-enfadada.svg">
-         <p>⚠️ Watch out for Webby, the malevolent Internet Witch! She haunts the landscape mode of small devices, causing chaos and mischief. Stay safe and stick to portrait mode. ⚠️</p>
-
+        <img
+          alt="Webby having a tantrum"
+          class="angry_witch"
+          id="angry_witch"
+          src="https://cdn.bfldr.com/Z0BJ31FP/at/9frphmfh5mbr8p6njhzm6r7/no-horizontal-mode.svg"
+        />
+        <p>
+          ⚠️ Watch out for Webby, the malevolent Internet Witch! She haunts the
+          landscape mode of small devices, causing chaos and mischief. Stay safe
+          and stick to portrait mode. ⚠️
+        </p>
       </section>
+    </section>
 
-   </section>
+    <script src="./js/class_hangman_content_data.js"></script>
+    <script src="./js/instances_hangman_content_data.js"></script>
 
-   <script src="./js/class_hangman_content_data.js"></script>
-   <script src="./js/instances_hangman_content_data.js"></script>
+    <script src="./js/class_hangman_game.js"></script>
+    <script src="./js/instances_hangman_game.js"></script>
 
-   <script src="./js/class_hangman_game.js"></script>
-   <script src="./js/instances_hangman_game.js"></script>
+    <script src="./js/html_code_generator.js"></script>
 
-   <script src="./js/html_code_generator.js"></script>
-
-   <script src="./js/game_content_data_selector.js"></script>
-   <script src="./js/guess_letter.js"></script>
-   <script src="./js/get_clue.js"></script>
-
-</body>
-
+    <script src="./js/game_content_data_selector.js"></script>
+    <script src="./js/guess_letter.js"></script>
+    <script src="./js/get_clue.js"></script>
+  </body>
 </html>
-
