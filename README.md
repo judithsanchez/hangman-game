@@ -1,6 +1,8 @@
 # Hangman Game Implementation
 
-[🔗 Live preview](https://judithsanchez.github.io/hangman-game-v2/)
+[🎥 Preview](https://www.loom.com/share/d0d8d515ee0540e893be2f1d5930a310?sid=e1b3ae7a-85d2-4934-8096-c665463425ff)
+
+[🚀 Live](https://judithsanchez.github.io/hangman-game-v2/)
 
 Webby's Celebrity Showdown is my version of the Hangman game, where you can choose to guess a sentence related to a celebrity.
 
